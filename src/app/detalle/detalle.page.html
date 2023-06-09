@@ -1,0 +1,64 @@
+<ion-header class="ion-no-border"[hidden]="scanactive">
+  <ion-toolbar color="rimith">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Registrar Tansacciones</ion-title>
+
+
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [style.-background]="scanactive? '#000000':'#ffff'"  >
+  <div [hidden]="scanactive">
+    <ion-list>
+
+
+
+      <div class="margen">
+        <section id="BotonesPosition">
+          <br>
+          <ion-button id="sizeBoton" color="primary" (click)="startScanner()">
+            <ion-icon id="iconDetalleAccion" name="document-text-outline"></ion-icon> Escanear Orden
+          </ion-button>
+  
+        </section>
+      
+  
+        <
+        <br>
+  
+      </div>
+  
+    </ion-list>
+  </div>
+
+
+
+
+ 
+
+  <ion-row class="scanner-buttons" *ngIf="scanactive==true">
+    <ion-col class="ion-no-padding">
+
+      <ion-button style="    width: 150px; margin-left: 120px;" expand="full" (click)="stopscanner()"   shape="round">
+        Cerrar
+      </ion-button>
+      <br>
+      <br>
+      <p style="color: white; font-size: 14px;">Coloque un código de barra en el interior del rectángulo del visión para escanear</p>
+ 
+   
+    </ion-col>
+  </ion-row>
+  
+  <div class="scan-box" *ngIf="scanactive==true">
+    <div id='cabina'></div>
+  </div>
+
+  
+
+
+</ion-content>

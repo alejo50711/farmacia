@@ -10,17 +10,85 @@
  */
 
 /* Core CSS required for Ionic components to work properly */
-@import "@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
-@import "@ionic/angular/css/normalize.css";
-@import "@ionic/angular/css/structure.css";
-@import "@ionic/angular/css/typography.css";
-@import '@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
-@import "@ionic/angular/css/padding.css";
-@import "@ionic/angular/css/float-elements.css";
-@import "@ionic/angular/css/text-alignment.css";
-@import "@ionic/angular/css/text-transformation.css";
-@import "@ionic/angular/css/flex-utils.css";
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+body.scanner-active {
+    --background: transparent;
+    --ion-background-color: transparent;
+  }
+
+  
+.basicActionSheet {
+    --backdrop-opacity: 0.7;
+    --background: transparend;
+    .action-sheet-title.sc-ion-action-sheet-md, .action-sheet-title.sc-ion-action-sheet-ios {
+        font-size: 20;
+       
+    }   
+}
+
+#iconoCabecera {
+    font-size: 25px;
+    position: relative;
+    top: 5px;
+}
+
+#cardDetalles {
+    margin-top: 50px;
+}
+
+#ColorToolbar {
+    background-color: #085FAB;
+}
+
+.md-v-line {
+    position: absolute;
+    border-left: 1px solid rgba(0, 0, 0, .125);
+    height: 65px;
+    top: 0px;
+    left: 54px;
+}
+
+#IconDetalle {
+    font-size: 32px;
+    position: relative;
+    right: 10px;
+    top: 8px;
+}
+
+#iconDetalleAccion {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+#title {
+    text-align: center;
+}
+
+
+#selectChofer {
+    margin-bottom: 40px;
+ }   
+
+#BotonesPosition {
+    text-align: center;
+}
+
+#sizeBoton {
+    height: 55px;
+    width: 340px;
+}

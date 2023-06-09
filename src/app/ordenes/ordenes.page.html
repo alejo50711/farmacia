@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Ordenes</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">ordenes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card  *ngFor="let ordeness of orden; let i=index" class="mb-3">
+    <ion-card-header>
+      <ion-card-title>{{i+1}}: Orden No: {{ordeness.numero}}</ion-card-title>
+      <ion-card-subtitle> Usuario: {{ordeness.nombre}}</ion-card-subtitle>
+      <div class="d-flex ">
+        <ion-card-subtitle >Fecha: {{ordeness.fecha}}</ion-card-subtitle>
+      
+      </div>
+    
+    </ion-card-header>
+  
+    <ion-card-content>
+     
+      <hr>
+    
+     <a [routerLink]="['/detalle',i]" [queryParams]="{accion:'1 '}">Ver Detalle</a>
+         
+      
+           
+    </ion-card-content>
+  </ion-card>
+
+  
+</ion-content>
